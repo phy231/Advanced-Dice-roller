@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Dice Roller Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Advanced Dice Roller</h1>
+
+    <div class="controls">
+      <div>
+        <label for="numDice">Number of Dice</label>
+        <input id="numDice" type="number" min="1" max="6" value="2" />
+      </div>
+
+      <div>
+        <label for="diceColor">Dice Border Color</label>
+        <input id="diceColor" type="color" value="#72f9b9" />
+      </div>
+    </div>
+
+    <div class="dice-area" aria-live="polite" role="region"></div>
+
+    <button id="rollBtn">Roll Dice</button>
+
+    <section class="history">
+      <h3>Roll History</h3>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section class="stats">
+      <div>Total Rolls: <span id="totalRolls">0</span></div>
+      <div>Last Roll Total: <span id="lastTotal">-</span></div>
+      <div>Average Roll: <span id="avgRoll">-</span></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
